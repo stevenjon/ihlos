@@ -1,0 +1,188 @@
+.table-style {
+  width: auto;
+
+  tbody {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Nunito, sans-serif !important;
+
+    .drug-tr.active-tr {
+      background-color: #b3b3b3;
+    }
+
+    .drug-tr {
+      font-size: 12px;
+
+      td {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+    }
+
+    .table-tr {
+      position: relative !important;
+      width: 100%;
+      background-color: white;
+      color: #313E47;
+      border-bottom: 10px solid #F9FAFB;
+      border-top: 10px solid #F9FAFB;
+
+      .table-icon {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+      }
+
+      //
+      //.tanlash-checkbox {
+      //  width: 30px!important;
+      //  height: 30px!important;
+      //  background-color: red!important;
+      //}
+    }
+
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 25px;
+  max-width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "\2713";
+  color: white;
+  top: -3px;
+  left: 5px;
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.page-block {
+  width: 200px !important;
+  text-align: center;
+
+  //ul li {
+  //  display: inline-block;
+  //}
+}
+
+//.pagination li {
+//  display: inline-block;
+//}
+
+.pagination {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  -webkit-mask-position: center;
+  vertical-align: middle;
+  background-color: #313E47;
+
+
+  &.icon-cart {
+    mask-image: url("img/cart.svg");
+    -webkit-mask-image: url("img/cart.svg");
+  }
+
+  &.icon-send {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    mask-image: url("img/send.svg");
+    -webkit-mask-image: url("img/send.svg");
+  }
+}
+
+.basket-block {
+  position: relative;
+  overflow: visible;
+}
+
+.basket {
+  margin-right: 20px;
+  position: relative;
+}
+
+.basket-title {
+  font-weight: bold;
+
+}
+
+.select-count {
+  z-index: 99;
+  overflow: visible;
+  position: absolute;
+  top: -5px;
+  border-radius: 5px;
+  right: 5px;
+  background-color: red;
+  text-align: center;
+  padding: 0 2px;
+
+  span {
+    color: white;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table-style {
+
+  }
+}
